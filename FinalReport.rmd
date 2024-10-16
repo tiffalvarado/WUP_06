@@ -32,6 +32,14 @@ If not, then whose view differs from whom??
 
 # Methods
 
+Capitol punishment is catagorical and race is also catagorical, since they are both catagorical we use the cat_cat helper file.  
+
+
+$H_0$ There is no relationship between capitol punishment and race.
+
+$H_0$ There is a relationship between capitol punishment and race.  
+
+
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
 # Results
@@ -42,6 +50,14 @@ If not, then whose view differs from whom??
 
 ### Graphical Descriptive Results
 
+```{r}
+barchartGC(~race + cappun,data=mydata)
+barchartGC(~race + cappun,data=mydata, type="percent")
+
+```
+
+The white race is has higher amount in favor versus opposed and the black race has more opposed than in favor. They are both still close in nuumber. 
+
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
 
 
@@ -51,6 +67,14 @@ If not, then whose view differs from whom??
 
 
 ### Numerical Descriptive Results
+
+```{r}
+table1 <- xtabs(~race + cappun, data=mydata)
+rowPerc(table1)
+colPerc(table1)
+```
+
+The white race is 65.10% in favor meaning 34.90% oppose and the black race are 42.63% in favor and 57.37 oppose.
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
@@ -63,14 +87,20 @@ If not, then whose view differs from whom??
 
 ## Inferential Results
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+this fisher test shows that the p-value is 2.2 which is two sided and that the white race was more in favor than the black race.
+
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
 `
-
-
 ## More data version
 
 
 # Discussion and Conclusion
 
-<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!--

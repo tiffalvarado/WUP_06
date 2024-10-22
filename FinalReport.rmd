@@ -37,7 +37,7 @@ Capitol punishment is catagorical and race is also catagorical, since they are b
 
 $H_0$ There is no relationship between capitol punishment and race.
 
-$H_0$ There is a relationship between capitol punishment and race.  
+$H_A$ There is a relationship between capitol punishment and race.  
 
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
@@ -102,5 +102,7 @@ this fisher test shows that the p-value is 2.2 which is two sided and that the w
 
 
 # Discussion and Conclusion
+We conclude that we reject the null hypothesis that there is no relationship between capitol punishment and race. The bar graph shows the whites have more in favor vs the blacks and the fisher test shows that the. p-value was 2.2 meaning there is a relationship between capitol punishment and race.
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!--
+
